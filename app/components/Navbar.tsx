@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import Link from "next/link";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -32,12 +33,12 @@ export default function Navbar() {
 
 export const Logo = () => {
   return (
-    <div className="text-[#00b67f] text-xl sm:text-3xl select-none">
+    <Link href={"/"} className="text-[#00b67f] text-xl sm:text-3xl select-none">
       <span className="text-2xl sm:text-4xl font-pacifico">se</span>
       <span className="font-poppins font-semibold">W</span>
       <span className="font-poppins font-semibold italic">N</span>
       <span className="text-2xl sm:text-4xl font-poppins font-semibold">a</span>
-    </div>
+    </Link>
   );
 };
 

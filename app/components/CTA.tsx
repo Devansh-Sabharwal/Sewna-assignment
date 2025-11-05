@@ -1,0 +1,35 @@
+"use client";
+import { useRouter } from "next/navigation";
+import Card from "./Card";
+
+export default function CTA() {
+  const router = useRouter();
+  return (
+    <div>
+      <div className="mt-12 flex flex-col gap-4">
+        <Card
+          background="#fff"
+          heading="Need a Designer?"
+          subheading="Discover talented designers, explore unique styles, and turn your ideas into reality"
+          img="/designers-group-1.png"
+          onClick={() => {
+            router.push("/browse");
+          }}
+          buttonText="Find Now"
+          direction="left"
+          buttonColor="#6F4E37"
+        />
+        <Card
+          background="#EBEBE9"
+          heading="Signup as Designer"
+          subheading="Showcase your portfolio, connect with clients, and bring your creative vision to life"
+          img="/image.png"
+          onClick={() => {}}
+          buttonText="Join Now"
+          direction="right"
+          buttonColor="black"
+        />
+      </div>
+    </div>
+  );
+}

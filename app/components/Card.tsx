@@ -1,5 +1,4 @@
 import { ArrowUpRight } from "lucide-react";
-import React from "react";
 
 interface Props {
   heading: string;
@@ -22,9 +21,9 @@ export default function Card(props: Props) {
       }`}
       style={{ backgroundColor: props.background }}
     >
-      <div className="w-full md:w-auto">
+      <div className="w-full md:w-auto transition-transform duration-500 hover:scale-105">
         <img
-          className={`h-[250px] md:h-full w-full object-cover ${
+          className={`h-[250px] md:h-full w-full ${
             !left
               ? "md:rounded-bl-[50px] md:rounded-tl-[50px]"
               : "md:rounded-br-[50px] md:rounded-tr-[50px]"
@@ -43,7 +42,7 @@ export default function Card(props: Props) {
         </div>
         <div className="mt-8 md:mt-16">
           <button
-            // onClick={props.onClick}
+            onClick={props.onClick}
             className="active:scale-95 cursor-pointer hover:scale-[105%] transition-all duration-300 flex items-center gap-3 md:gap-4  px-5 md:px-6 py-3 md:py-4 rounded-3xl md:rounded-4xl text-white"
             style={{ backgroundColor: props.buttonColor }}
           >
